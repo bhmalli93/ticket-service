@@ -9,7 +9,7 @@ import com.walmart.ticketservice.model.Venue;
 
 public class TicketServiceDriver {
 
-    public static void main(String args[]){
+    public static void main(String args[]) throws InterruptedException{
 
         Venue venue = new Venue("Venue-01","Venue1",10,10);
         TicketServiceImpl service = new TicketServiceImpl(venue,new ArrayList<Customer>()); /* create service with venue and empty customer list*/
@@ -18,6 +18,6 @@ public class TicketServiceDriver {
         System.out.println("Seats after hold::"+service.numSeatsAvailable());/*should be 95*/
         System.out.println(sh.toString());
         System.out.println(service.reserveSeats(200,"junk@gmail.com"));
-        System.out.println(service.reserveSeats(sh.getSeatHoldId(),sh.getCustomer().getCustomerEmail()));
+        System.out.println(service.reserveSeats(sh.getSeatHoldId(),sh.getCustomer().getCustomerEmail()));           
     }
 }

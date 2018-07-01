@@ -32,8 +32,11 @@ public class TicketServiceImpl implements TicketService{
     }
 
     private void checkAndExpireSeatHolds() {
-        for(SeatHold sh:this.seatHoldSet){
-            if(sh.getExpiresAt().isBefore(ZonedDateTime.now(Constants.DEFAULT_TIME_ZONE))) this.seatHoldSet.remove(sh);
+    	for(SeatHold sh:this.seatHoldSet){
+            if(sh.getExpiresAt().isBefore(ZonedDateTime.now(Constants.DEFAULT_TIME_ZONE))){
+                for(Seat s:sh.getSeats()) s.setStatus(Seat.SeatStatus.AVAILABLE);
+                this.seatHoldSet.remove(sh);
+            }
         }
     }
 

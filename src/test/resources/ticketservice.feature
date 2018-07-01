@@ -21,6 +21,9 @@ Feature: I need to Hold and Book Ticket
 	Then I should see status as reserved for seats
 	
 	#Reserve And Commit a specific group
-	When I Hold seats each for group booking
+	When I Hold seats for group booking
 	Then I should see status as reserved for seats for group	
 	Then remaining seats should be 45
+	
+	#customer try to hold zero seats
+	When customer try to hold zero seats then seat hold should be null	
