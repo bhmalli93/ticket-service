@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.test;
+package com.walmart.ticketservice.cucumber;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

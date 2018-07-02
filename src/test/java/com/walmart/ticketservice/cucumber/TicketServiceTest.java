@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.test;
+package com.walmart.ticketservice.cucumber;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
