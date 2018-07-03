@@ -82,15 +82,13 @@ public class TicketServiceStepDefs {
 	@When("^Book Seats For HoldId (.+)$")
 	public void book_seats_for_existing_hold_id(String customerEmail) {
 		String reserverd = service.reserveSeats(seatHold.getSeatHoldId(), customerEmail);
-		System.out.println(reserverd);
+		assertNotNull(reserverd);
 	}
 
 	@Then("^I should see status as reserved for seats$")
 	public void I_should_see_status_reserved() {
 		for (Seat seat : seatHold.getSeats()) {
 			assertEquals(Seat.SeatStatus.RESERVED, seat.getStatus());
-			System.out.println(Arrays.asList(seat.getSeatId(), seat.getStatus()));
-
 		}
 	}
 
@@ -108,11 +106,9 @@ public class TicketServiceStepDefs {
 	public void I_should_see_status_reserved_for_group() {
 		for (Seat seat : seatHold1.getSeats()) {
 			assertEquals(Seat.SeatStatus.RESERVED, seat.getStatus());
-			System.out.println(Arrays.asList(seat.getSeatId(), seat.getStatus()));
 		}
 		for (Seat seat : seatHold2.getSeats()) {
 			assertEquals(Seat.SeatStatus.RESERVED, seat.getStatus());
-			System.out.println(Arrays.asList(seat.getSeatId(), seat.getStatus()));
 		}
 	}
 

@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {"src/test/resources/ticketservice.feature"},
-glue = {"com.walmart.ticketservice.test"},
+glue = {"com.walmart.ticketservice.cucumber"},
 plugin = {"pretty", "html:target/cucumber"},
 tags = {"@myFeature"})
 public class TicketServiceTest {
