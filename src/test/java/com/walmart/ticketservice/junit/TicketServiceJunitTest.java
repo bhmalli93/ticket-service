@@ -40,14 +40,13 @@ public class TicketServiceJunitTest {
 	public void test2FindAndHoldSeats() {
 		SeatHold seatHold = service.findAndHoldSeats(10, "test_hold@gmail.com");
 		assertNotNull(seatHold.getSeatHoldId());
-		System.out.println("Hold Id"+seatHold.getSeatHoldId());
 		assertEquals(40, service.numSeatsAvailable());
 	}	
 	
 	@Test
 	public void test3ReserveSeats() {
 		String status = service.reserveSeats(1, "test_hold@gmail.com");
-		System.out.println(""+status);
+		assertNotNull(status);
 		assertEquals(40, service.numSeatsAvailable());
 	}
 	
@@ -76,6 +75,9 @@ public class TicketServiceJunitTest {
 		SeatHold seatHold = service.findAndHoldSeats(capacity+1, "mytest@gmail.com");
 		assertNull(seatHold);
 	}
+	
+	
+	
 	// Un Comment this code if you want to test Resetting Holds after specific time, for now we are resetting after every 2 minutes
 	/*@Test
 	public void test7HoldAndResetAfterSetOfTime() throws InterruptedException {
