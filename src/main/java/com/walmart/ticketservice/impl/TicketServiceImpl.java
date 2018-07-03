@@ -59,7 +59,7 @@ public class TicketServiceImpl implements TicketService{
         Seat seat;
         List<Seat> holdedSeats = new ArrayList<Seat>();
         int firstSeatAvailable = getFirstAvailableSeat();
-        if(firstSeatAvailable==-1 || (firstSeatAvailable+numSeats)>numSeatsAvailable()) return null;
+        if(firstSeatAvailable==-1 || numSeats>numSeatsAvailable()) return null;
         for(int i=0;i<numSeats;i++,firstSeatAvailable++){
             seat = seatMap.get(firstSeatAvailable);
             seat.setStatus(Seat.SeatStatus.HOLDED);

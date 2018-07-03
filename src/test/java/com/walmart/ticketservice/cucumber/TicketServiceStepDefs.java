@@ -30,7 +30,6 @@ public class TicketServiceStepDefs {
 	  @Before 
 	  public void venue() { venue = new Venue("Venue-01","Venue1",10,10);
 	  service = new TicketServiceImpl(venue,new ArrayList<Customer>()); /* create service with venue and empty customer list */
-	  System.out.println("Created Seats Completed"+service.numSeatsAvailable()); 
 	  }
 	 
 
@@ -50,7 +49,6 @@ public class TicketServiceStepDefs {
 	@When("hold (\\d+) seats for customer (.+)$")
 	public void hold_25_seats_for_customer(Integer noOfSeatsToHold, String customer) {
 		seatHold = service.findAndHoldSeats(noOfSeatsToHold, customer);
-		System.out.println("seatHoldId " + seatHold.getSeatHoldId());
 	}
 
 	@Then("^seathold id should not be null$")
@@ -76,7 +74,6 @@ public class TicketServiceStepDefs {
 	@Then("^you should get an exception msg$")
 	public void you_should_get_exception() {
 		assertEquals(Constants.EXCEPTION_MSG, status);
-		System.out.println(status);
 	}
 
 	@When("^Book Seats For HoldId (.+)$")
@@ -95,9 +92,7 @@ public class TicketServiceStepDefs {
 	@When("^I Hold seats for group booking$")
 	public void hold_remaining_seats_for_customer() {
 		seatHold1 = service.findAndHoldSeats(15, "hold1_test@gmail.com");
-		System.out.println("seatHold1 " + seatHold1.getSeatHoldId());
 		seatHold2 = service.findAndHoldSeats(15, "hold1_test@gmail.com");
-		System.out.println("seatHold2 " + seatHold2.getSeatHoldId());
 		service.reserveSeats(seatHold1.getSeatHoldId(), "hold1_test@gmail.com");
 		service.reserveSeats(seatHold2.getSeatHoldId(), "hold1_test@gmail.com");
 	}

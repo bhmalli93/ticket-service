@@ -79,13 +79,11 @@ public class TicketServiceJunitTest {
 	
 	
 	// Un Comment this code if you want to test Resetting Holds after specific time, for now we are resetting after every 2 minutes
-	/*@Test
+ 	/*@Test
 	public void test7HoldAndResetAfterSetOfTime() throws InterruptedException {
-		System.out.println("Available Seats Before Hold "+service.numSeatsAvailable());
 		int beforeHold = service.numSeatsAvailable();
-		SeatHold seatHold = service.findAndHoldSeats(5, "abcd@gmail.com");
-		Thread.sleep(125000);
-		System.out.println("Seats After Restting Holds after every 2 minutes "+service.numSeatsAvailable());
+		SeatHold seatHold = service.findAndHoldSeats(5,"abcd@gmail.com");
+		Thread.sleep(145000);
 		assertEquals(beforeHold, service.numSeatsAvailable());	
 	}*/
 	
