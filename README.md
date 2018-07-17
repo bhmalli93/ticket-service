@@ -1,4 +1,6 @@
 #Ticketing Service
+
+Core Java Application - Designed Solution based on Not to use any database to store data or use Data Structures to Store data.
     
    Ticket Service is service which helps customers to find available seats, hold them and reserve them in a Venue. After every 120 seconds, 
    system expire the seats held and make all seats holded for the customer will be available for next holding.
