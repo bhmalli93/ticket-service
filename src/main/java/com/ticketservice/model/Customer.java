@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.model;
+package com.ticketservice.model;
 
 /* for simplicity just creating customer with id and email, skipping other customer details
     like address, username, password, card info etc*/

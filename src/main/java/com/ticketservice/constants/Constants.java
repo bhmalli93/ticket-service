@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.constants;
+package com.ticketservice.constants;
 
 import java.time.ZoneId;
 

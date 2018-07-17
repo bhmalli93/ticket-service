@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.impl;
+package com.ticketservice.impl;
 
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -9,12 +9,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import com.walmart.ticketservice.constants.Constants;
-import com.walmart.ticketservice.model.Customer;
-import com.walmart.ticketservice.model.Seat;
-import com.walmart.ticketservice.model.SeatHold;
-import com.walmart.ticketservice.model.Venue;
-import com.walmart.ticketservice.service.TicketService;
+import com.ticketservice.constants.Constants;
+import com.ticketservice.model.Customer;
+import com.ticketservice.model.Seat;
+import com.ticketservice.model.SeatHold;
+import com.ticketservice.model.Venue;
+import com.ticketservice.service.TicketService;
 
 public class TicketServiceImpl implements TicketService{
 

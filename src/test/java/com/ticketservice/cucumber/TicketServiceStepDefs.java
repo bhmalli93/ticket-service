@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.cucumber;
+package com.ticketservice.cucumber;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -7,13 +7,13 @@ import static org.junit.Assert.assertNull;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.walmart.ticketservice.constants.Constants;
-import com.walmart.ticketservice.impl.TicketServiceImpl;
-import com.walmart.ticketservice.model.Customer;
-import com.walmart.ticketservice.model.Seat;
-import com.walmart.ticketservice.model.SeatHold;
-import com.walmart.ticketservice.model.Venue;
-import com.walmart.ticketservice.service.TicketService;
+import com.ticketservice.constants.Constants;
+import com.ticketservice.impl.TicketServiceImpl;
+import com.ticketservice.model.Customer;
+import com.ticketservice.model.Seat;
+import com.ticketservice.model.SeatHold;
+import com.ticketservice.model.Venue;
+import com.ticketservice.service.TicketService;
 
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;

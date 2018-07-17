@@ -1,6 +1,6 @@
-package com.walmart.ticketservice.service;
+package com.ticketservice.service;
 
-import com.walmart.ticketservice.model.SeatHold;
+import com.ticketservice.model.SeatHold;
 
 public interface TicketService {
         /**

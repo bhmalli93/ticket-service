@@ -1,10 +1,10 @@
-package com.walmart.ticketservice.model;
+package com.ticketservice.model;
 
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.walmart.ticketservice.constants.Constants;
+import com.ticketservice.constants.Constants;
 
 public class SeatHold {
 

@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.junit;
+package com.ticketservice.junit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -11,12 +11,12 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import com.walmart.ticketservice.constants.Constants;
-import com.walmart.ticketservice.impl.TicketServiceImpl;
-import com.walmart.ticketservice.model.Customer;
-import com.walmart.ticketservice.model.SeatHold;
-import com.walmart.ticketservice.model.Venue;
-import com.walmart.ticketservice.service.TicketService;
+import com.ticketservice.constants.Constants;
+import com.ticketservice.impl.TicketServiceImpl;
+import com.ticketservice.model.Customer;
+import com.ticketservice.model.SeatHold;
+import com.ticketservice.model.Venue;
+import com.ticketservice.service.TicketService;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TicketServiceJunitTest {
 

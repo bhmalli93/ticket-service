@@ -1,4 +1,4 @@
-package com.walmart.ticketservice.model;
+package com.ticketservice.model;
 
 import java.util.HashMap;
 import java.util.Map;
